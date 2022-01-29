@@ -1,0 +1,51 @@
+{
+  "estudiantes": [
+    {
+      "id": 1,
+      "nombre": "Carlos",
+      "apellidos": "Perez Arango"
+    },
+    {
+      "id": 2,
+      "nombre": "Daniela",
+      "apellidos": "Munera Ortiz"
+    },
+    {
+      "id": 3,
+      "nombre": "Luis",
+      "apellidos": "Mejia Echavarria"
+    },
+    {
+      "id": 4,
+      "nombre": "Juan",
+      "apellidos": "Mosquera Perea"
+    },
+    {
+      "nombre": "Evelin",
+      "apellidos": "Rios DelgadoU",
+      "id": 5
+    }
+  ],
+  "profesores": [
+    {
+      "id": 1,
+      "nombre": "Andres",
+      "materia": "ciencias"
+    },
+    {
+      "id": 2,
+      "nombre": "Sebastian",
+      "materia": "matematicas"
+    },
+    {
+      "id": 3,
+      "nombre": "Alejandro",
+      "materia": "sociales"
+    },
+    {
+      "id": 4,
+      "nombre": "Gloria",
+      "materia": "informatica"
+    }
+  ]
+}
