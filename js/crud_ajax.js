@@ -30,7 +30,7 @@ const getAll = () => {
     method: "GET",
     url: "http://localhost:3000/estudiantes",
     success: (res) => {
-      console.log(res);
+      //console.log(res);
       res.forEach((el) => {
         $template.querySelector(".name").textContent = el.nombre;
         $template.querySelector(".apellidos").textContent = el.apellidos;

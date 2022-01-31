@@ -26,11 +26,6 @@
       "id": 5
     },
     {
-      "nombre": "Hugo ",
-      "apellidos": "cfc crcr",
-      "id": 6
-    },
-    {
       "nombre": "Evelyn",
       "apellidos": "mejia",
       "id": 9
@@ -49,6 +44,11 @@
       "nombre": "Felipe ",
       "apellidos": "Gomez",
       "id": 14
+    },
+    {
+      "nombre": "Daniela",
+      "apellidos": "Munera Ortiz",
+      "id": 17
     }
   ],
   "profesores": [
