@@ -22,8 +22,33 @@
     },
     {
       "nombre": "Evelin",
-      "apellidos": "Rios DelgadoU",
+      "apellidos": "Rios Delgado",
       "id": 5
+    },
+    {
+      "nombre": "Hugo ",
+      "apellidos": "cfc crcr",
+      "id": 6
+    },
+    {
+      "nombre": "Evelyn",
+      "apellidos": "mejia",
+      "id": 9
+    },
+    {
+      "nombre": "Car",
+      "apellidos": "Perez Arango",
+      "id": 12
+    },
+    {
+      "nombre": "Cris",
+      "apellidos": "Mon",
+      "id": 13
+    },
+    {
+      "nombre": "Felipe ",
+      "apellidos": "Gomez",
+      "id": 14
     }
   ],
   "profesores": [
