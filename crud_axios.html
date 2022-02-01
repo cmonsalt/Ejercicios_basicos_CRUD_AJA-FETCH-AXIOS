@@ -16,10 +16,10 @@
       <form action="" class="crud-form">
         <input type="text" name="nombre" placeholder="nombre" required>
         <br>
-        <input type="text" name="apellido" placeholder="apellido" required>
+        <input type="text" name="apellidos" placeholder="apellidos" required>
         <br>
         <input type="submit" value="Enviar">
-        <input type="hidden" name="action">
+        <input type="hidden" name="id">
       </form>
     </article>
     <article>
@@ -39,21 +39,15 @@
   <template id="crud-template">
     <tr>
       <td class="name"></td>
-      <td class="apellido"></td>
+      <td class="apellidos"></td>
       <td>
         <button class="edit">Editar</button>
         <button class="delete">Eliminar</button>
       </td>
     </tr>
   </template>
-  <script>
-    const d = document,
-      $table = d.querySelector("crud-table"),
-      $form = d.querySelector("crud-form"),
-      $title = d.querySelector("crud-tittle"),
-      $template = d.getElementById("crud-template").content,
-      $fragment = d.createDocumentFragment();
-  </script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="js/crud_axios.js"></script>
 </body>
 
 </html>

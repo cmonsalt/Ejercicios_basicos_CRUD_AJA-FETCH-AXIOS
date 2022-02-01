@@ -7,9 +7,8 @@ const d = document,
 
 const getAll = async () => {
   try {
-    let res = await fetch("http://localhost:3000/estudiantes"),
-      json = await res.json();
-    if (!res.ok) throw { status: res.status, statusText: res.statusText };
+    let res = await axios.get("http://localhost:3000/estudiantes"),
+      json = res.data;
     json.forEach((el) => {
       $template.querySelector(".name").textContent = el.nombre;
       $template.querySelector(".apellidos").textContent = el.apellidos;
@@ -25,29 +24,29 @@ const getAll = async () => {
     let message = err.statusText || "Ocurrio un error";
     $table.insertAdjacentHTML(
       "afterend",
-      `<p><b>Error ${err.status}: ${message}</b></p`
+      `<p><b>Error ${err.status}: ${message}</b></p>`
     );
   }
 };
-d.addEventListener("DOMCountentloaded", getAll);
+d.addEventListener("DOMContentLoaded", getAll);
 
 d.addEventListener("submit", async (e) => {
   if (e.target === $form) {
     e.preventDefault;
+
     if (!e.target.id.value) {
-      //Create-POST
+      //create-POST
       try {
         let options = {
           method: "POST",
           headers: { "content-type": "application/json;charset=utf-8" },
-          body: JSON.stringify({
+          data: JSON.stringify({
             nombre: e.target.nombre.value,
             apellidos: e.target.apellidos.value,
           }),
         };
-        let res = await fetch("http://localhost:3000/estudiantes", options),
+        let res = await axios("http://localhost:3000/estudiantes", options),
           json = await res.json();
-        if (!res.ok) throw { status: res.status, statusText: res.statusText };
         location.reload();
       } catch (err) {
         let message = err.statusText || "Ocurrio un error";
@@ -62,17 +61,16 @@ d.addEventListener("submit", async (e) => {
         let options = {
           method: "PUT",
           headers: { "content-type": "application/json;charset=utf-8" },
-          body: JSON.stringify({
+          data: JSON.stringify({
             nombre: e.target.nombre.value,
             apellidos: e.target.apellidos.value,
           }),
         };
-        let res = await fetch(
+        let res = await axios(
             `http://localhost:3000/estudiantes/${e.target.id.value}`,
             options
           ),
           json = await res.json();
-        if (!res.ok) throw { status: res.status, statusText: res.statusText };
         location.reload();
       } catch (err) {
         let message = err.statusText || "Ocurrio un error";
@@ -105,19 +103,15 @@ d.addEventListener("click", async (e) => {
           method: "DELETE",
           headers: { "content-type": "application/json;charset=utf-8" },
         };
-        let res = await fetch(
+        let res = await axios(
             `http://localhost:3000/estudiantes/${e.target.dataset.id}`,
             options
           ),
-          json = await res.json();
-        if (!res.ok) throw { status: res.status, statusText: res.statusText };
+          json = await res.data;
         location.reload();
       } catch (err) {
         let message = err.statusText || "Ocurrio un error";
-        $form.insertAdjacentHTML(
-          "afterend",
-          `<p><b>Error ${err.status}: ${message}</b></p`
-        );
+        alert(`Error ${err.status}: ${message}`);
       }
     }
   }
